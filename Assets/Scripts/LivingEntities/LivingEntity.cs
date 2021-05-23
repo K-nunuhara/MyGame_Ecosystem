@@ -9,6 +9,7 @@ public abstract class LivingEntity : MonoBehaviour
     public float health;
     public float calorie;
     public float water;
+    public GameObject ui;
     // public Genus genus;
 
     public abstract void Grow();

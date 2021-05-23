@@ -107,6 +107,8 @@ public class Sheep : Herbivore
         this.health = stats.MAX_HEALTH;
         this.calorie = stats.BASE_CALORIE;
         this.water = stats.BASE_WATER;
+        this.ui = Instantiate(UIManager.instance.animalUI, this.transform);
+        this.ui.SetActive(true);
         this.gene = gameObject.AddComponent<AnimalGene>();
         // TODO: Add Genus
         this.isMovable = true;
