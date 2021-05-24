@@ -83,7 +83,7 @@ public class Flower : Plant
         this.health = stats.MAX_HEALTH;
         this.calorie = stats.BASE_CALORIE;
         this.water = stats.BASE_WATER;
-        this.gene = gameObject.AddComponent<PlantGene>();
+        //this.gene = gameObject.AddComponent<PlantGene>();
         // TODO: Add Genus
         this.state = gameObject.AddComponent<Normal>();
         this.rb = this.GetComponent<Rigidbody>();

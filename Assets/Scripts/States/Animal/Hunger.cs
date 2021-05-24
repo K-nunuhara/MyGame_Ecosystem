@@ -78,7 +78,7 @@ namespace AnimalStates
             else if ((target.transform.position - mover.transform.position).sqrMagnitude < mover.transform.localScale.sqrMagnitude)
             {
                 CalcUtils.LookTarget(mover, target);
-                // Do nothing
+                mover.ChangeState(Eating.instance);
             }
             else
             {
@@ -89,7 +89,7 @@ namespace AnimalStates
             }
         }
 
-        public void Action()
+        public void Action(Animal mover, GameObject target)
         {
             // Output "Meee" every few seconds;
             Debug.Log("Meee");

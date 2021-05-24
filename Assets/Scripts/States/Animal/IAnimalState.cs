@@ -9,6 +9,6 @@ namespace AnimalStates
         public GameObject FindTarget(Animal mover);
         public void TryToMove(Animal mover, GameObject target);
         public void Move(Animal mover, GameObject target);
-        public void Action();
+        public void Action(Animal mover, GameObject target);
     }
 }

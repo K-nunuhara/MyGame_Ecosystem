@@ -7,6 +7,16 @@ public class GeneManager : MonoBehaviour
     // Singleton
     public static GeneManager instance { get; private set; }
 
+    public AnimalGene AnimalGeneInit()
+    {
+        return new AnimalGene(RundomGender());
+    }
+
+    public AnimalGene AnimalGeneInit(Genders.Type type)
+    {
+        return new AnimalGene(type);
+    }
+
     public Gene Inherite(Gene momGene, Gene dadGene)
     {
         // TODO

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using AnimalStates;
 
 public class Sheep : Herbivore
@@ -13,6 +14,7 @@ public class Sheep : Herbivore
     public float soundSpan = 7f;
     public float currentTime = 0f;
     public float growRate = 0.1f;
+    public Slider slider;
 
     public override void Grow()
     {
@@ -73,9 +75,19 @@ public class Sheep : Herbivore
     {
         ConsumeCalorie();
 
+        if (this.health <= this.stats.MIN_HEALTH)
+        {
+            Die();
+        }
+        else
+        {
+            slider.value = this.health;
+        }
+
         if (this.calorie < this.stats.BASE_CALORIE)
         {
             ChangeState(Hunger.instance);
+            //ˆêu‚ÅEating‚ªI‚í‚ç‚È‚¢‚æ‚¤‚É‘Îô‚·‚é
         }
 
         currentTime += Time.deltaTime * TimeManager.instance.getCurrentGameSpeedValue();
@@ -95,7 +107,7 @@ public class Sheep : Herbivore
     {
         target = state.FindTarget(this);
         state.TryToMove(this, target);
-        state.Action();
+        state.Action(this, target);
     }
 
     private void Initialize()
@@ -109,7 +121,10 @@ public class Sheep : Herbivore
         this.water = stats.BASE_WATER;
         this.ui = Instantiate(UIManager.instance.animalUI, this.transform);
         this.ui.SetActive(true);
-        this.gene = gameObject.AddComponent<AnimalGene>();
+        this.slider = this.ui.transform.Find(UI.Name.Slider_HP.ToString()).GetComponent<Slider>();
+        this.slider.minValue = this.stats.MIN_HEALTH;
+        this.slider.maxValue = this.stats.MAX_HEALTH;
+        this.gene = GeneManager.instance.AnimalGeneInit();
         // TODO: Add Genus
         this.isMovable = true;
         this.state = Normal.instance;

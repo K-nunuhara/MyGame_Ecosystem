@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Gene : MonoBehaviour
+public abstract class Gene
 {
     public float size;
     public float diseaseResist;

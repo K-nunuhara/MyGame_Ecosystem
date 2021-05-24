@@ -280,8 +280,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 28d3f020-3d27-4da6-8953-44a79393f2d3
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -971,6 +971,11 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &446934513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8142220824518924396, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+  m_PrefabInstance: {fileID: 8142220823964713039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &472677252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
@@ -1134,10 +1139,10 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   isMovable: 1
   uid: c5dcbf66-d7b5-4b1c-9266-2d55282ff546
   momUid: 
-  gene: {fileID: 0}
   stats: {fileID: 0}
   sound: {fileID: 0}
   rb: {fileID: 0}
@@ -1148,6 +1153,7 @@ MonoBehaviour:
   soundSpan: 7
   currentTime: 0
   growRate: 0.1
+  slider: {fileID: 0}
 --- !u!136 &548487445
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1224,8 +1230,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 1da591fd-36ea-4b33-84d3-74560d5a893b
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -1536,8 +1542,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 1fc5ab28-275d-4364-96d2-719a3e955254
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -2257,8 +2263,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 57951aba-1908-4cb4-967d-c78c723cd7c1
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -3031,10 +3037,10 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   isMovable: 1
   uid: 42a5820a-dfcc-4c3e-a147-fd17314befaa
   momUid: 
-  gene: {fileID: 0}
   stats: {fileID: 11400000, guid: 29450e45773028141942b2b3eb832bb4, type: 2}
   sound: {fileID: 0}
   rb: {fileID: 0}
@@ -3045,6 +3051,7 @@ MonoBehaviour:
   soundSpan: 7
   currentTime: 0
   growRate: 0.1
+  slider: {fileID: 0}
 --- !u!54 &1240921810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3582,8 +3589,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: dc695588-67ca-40fb-925a-1325c3618b28
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -3628,8 +3635,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 1b36c998-5e56-4e77-b615-3c1e9a223cce
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -3751,8 +3758,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: d785ace7-8377-4153-af6c-07401a7830ca
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -3943,8 +3950,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 1bad1266-aed7-4962-806c-fb3d37339018
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -3970,6 +3977,7 @@ GameObject:
   - component: {fileID: 1666296177}
   - component: {fileID: 1666296176}
   - component: {fileID: 1666296178}
+  - component: {fileID: 1666296179}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4033,6 +4041,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b55583ef04908646a84bc5653380392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1666296179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666296174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737f313dfd035814abbc4b464c1e8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalUI: {fileID: 446934513}
 --- !u!1 &1671782709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1305863508104471096, guid: 0063cb53de8a09048abc4869a1e24c90, type: 3}
@@ -4069,8 +4090,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 3eb164b2-f590-4efe-82e9-abdf923bdc70
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -4192,8 +4213,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 840c8ba9-8fde-4ac1-bb78-dadfb0e2280c
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -4412,8 +4433,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 4091ec93-fc4d-4b7e-baa8-c4cd3a2da757
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -4612,8 +4633,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 983133b1-2f70-4b28-94b6-8f028aae8151
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -4801,8 +4822,8 @@ MonoBehaviour:
   health: 0
   calorie: 0
   water: 0
+  ui: {fileID: 0}
   uid: 8cee95ed-4fcd-469b-8c69-680b0f55afb1
-  gene: {fileID: 0}
   stats: {fileID: 0}
   rb: {fileID: 0}
   target: {fileID: 0}
@@ -5080,6 +5101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2160646492946821695, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5687941994034379353, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -5087,6 +5112,30 @@ PrefabInstance:
     - target: {fileID: 5687941994034379353, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134104691249852135, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142220824518924392, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
       propertyPath: m_Pivot.x
@@ -5172,8 +5221,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8142220824518924393, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142220824518924394, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8142220824518924394, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
       propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142220824518924395, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8142220824518924396, guid: f2e5e07144be5be4e81ebdb4ea5fac0e, type: 3}

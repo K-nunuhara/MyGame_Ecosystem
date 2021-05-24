@@ -62,7 +62,7 @@ namespace AnimalStates
             }
         }
 
-        public void Action()
+        public void Action(Animal mover, GameObject target)
         {
             // Output "Baaa" every few seconds;
             Debug.Log("Baaa");
