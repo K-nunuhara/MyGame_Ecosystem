@@ -15,8 +15,8 @@ public class LivingEntityStats : ScriptableObject
     public float MIN_WATER;
     public float CONSUME_WATER;
     // TODO: Implement Biomes
-    //public Biomes[] LIKE_BIOMES;
-    //public Biomes[] DISLIKE_BIOMES;
-    //public Species[] LIKE_SPECIES;
-    //public Species[] DISLIKE_SPECIES;
+    //public Biomes.Type[] LIKE_BIOMES;
+    //public Biomes.Type[] DISLIKE_BIOMES;
+    public Species.Type[] LIKE_SPECIES;
+    //public Species.Type[] DISLIKE_SPECIES;
 }

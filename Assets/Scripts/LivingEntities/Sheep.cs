@@ -84,10 +84,12 @@ public class Sheep : Herbivore
             slider.value = this.health;
         }
 
-        if (this.calorie < this.stats.BASE_CALORIE)
+        if (this.state.GetType() != Eating.instance.GetType())
         {
-            ChangeState(Hunger.instance);
-            //ˆêu‚ÅEating‚ªI‚í‚ç‚È‚¢‚æ‚¤‚É‘Îô‚·‚é
+            if (this.calorie < this.stats.BASE_CALORIE)
+            {
+                ChangeState(Hunger.instance);
+            }
         }
 
         currentTime += Time.deltaTime * TimeManager.instance.getCurrentGameSpeedValue();
@@ -130,6 +132,7 @@ public class Sheep : Herbivore
         this.state = Normal.instance;
         this.sound = null;
         this.rb = this.GetComponent<Rigidbody>();
+        this.stats.DIET = new Species.Type[] { Species.Type.Flower, Species.Type.Grass };
     }
 
 }

@@ -13,7 +13,7 @@ namespace AnimalStates
 
         public GameObject FindTarget(Animal mover)
         {
-            return null;
+            return Hunger.instance.FindTarget(mover);
         }
 
         public void TryToMove(Animal mover, GameObject target)
@@ -47,8 +47,16 @@ namespace AnimalStates
 
         public void Action(Animal mover, GameObject target)
         {
-            mover.calorie += 100f;
-            Debug.Log("EATING");
+            foreach (Species.Type diet in mover.stats.DIET)
+            {
+                if (target.CompareTag(diet.ToString()))
+                {
+                    Debug.Log("EATING");
+                }
+            }
+            //(Flower)target.
+            //mover.calorie += 100f;
+            //Debug.Log("EATING");
         }
 
         private void Awake()

@@ -9,7 +9,5 @@ public class AnimalStats : LivingEntityStats
     public int MAX_BREED;
     public float EAT_DURATION;
     public float DRINK_DURATION;
-
-    // TODO: Implement Species
-    //public Species[] DIET;
+    public Species.Type[] DIET;
 }

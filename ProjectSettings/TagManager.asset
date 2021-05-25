@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - HP_Bar
+  - Flower
   layers:
   - Default
   - TransparentFX
