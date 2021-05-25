@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HP_Bar
   - Flower
+  - Grass
   layers:
   - Default
   - TransparentFX

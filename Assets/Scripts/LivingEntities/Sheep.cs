@@ -103,13 +103,13 @@ public class Sheep : Herbivore
             MakeSound();
         }
 
+        target = state.FindTarget(this);
+        state.Action(this, target);
     }
 
     private void FixedUpdate()
     {
-        target = state.FindTarget(this);
         state.TryToMove(this, target);
-        state.Action(this, target);
     }
 
     private void Initialize()

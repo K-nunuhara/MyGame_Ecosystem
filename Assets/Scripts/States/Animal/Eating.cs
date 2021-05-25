@@ -11,6 +11,8 @@ namespace AnimalStates
         // Singleton
         public static Eating instance { get; private set; }
 
+        public float eatAmount = 1000;
+
         public GameObject FindTarget(Animal mover)
         {
             return Hunger.instance.FindTarget(mover);
@@ -51,12 +53,9 @@ namespace AnimalStates
             {
                 if (target.CompareTag(diet.ToString()))
                 {
-                    Debug.Log("EATING");
+                    Eat(mover, target, target.tag);
                 }
             }
-            //(Flower)target.
-            //mover.calorie += 100f;
-            //Debug.Log("EATING");
         }
 
         private void Awake()
@@ -69,6 +68,26 @@ namespace AnimalStates
             else
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        private void Eat(Animal mover, GameObject target, string tag)
+        {
+            if (target.GetComponent<Flower>().calorie == 0)
+            {
+                Destroy(target);
+                mover.ChangeState(Normal.instance);
+                //Debug.Log("State :" + mover.state);
+            }
+            else
+            {
+                if (tag == Species.Type.Flower.ToString())
+                {
+                    target.GetComponent<Flower>().calorie =
+                        Mathf.Max(target.GetComponent<Flower>().calorie - eatAmount * Time.deltaTime, target.GetComponent<Flower>().stats.MIN_CALORIE);
+                }
+
+                mover.calorie = Mathf.Min(mover.calorie + eatAmount * Time.deltaTime, mover.stats.MAX_CALORIE);
             }
         }
 
