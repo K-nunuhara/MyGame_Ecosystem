@@ -79,6 +79,7 @@ namespace AnimalStates
             {
                 CalcUtils.LookTarget(mover, target);
                 mover.ChangeState(Eating.instance);
+                // Change isMovable = true after Eating
             }
             else
             {
@@ -92,7 +93,7 @@ namespace AnimalStates
         public void Action(Animal mover, GameObject target)
         {
             // Output "Meee" every few seconds;
-            Debug.Log("Meee");
+            Debug.Log(mover.uid + ": Meee");
         }
 
         private bool CheckStraight(Animal mover)

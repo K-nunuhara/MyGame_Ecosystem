@@ -90,6 +90,10 @@ public class Sheep : Herbivore
             {
                 ChangeState(Hunger.instance);
             }
+            else
+            {
+                ChangeState(Normal.instance);
+            }
         }
 
         currentTime += Time.deltaTime * TimeManager.instance.getCurrentGameSpeedValue();
@@ -103,13 +107,15 @@ public class Sheep : Herbivore
             MakeSound();
         }
 
-        target = state.FindTarget(this);
-        state.Action(this, target);
+        //target = state.FindTarget(this);
+        //state.Action(this, target);
     }
 
     private void FixedUpdate()
     {
+        target = state.FindTarget(this);
         state.TryToMove(this, target);
+        state.Action(this, target);
     }
 
     private void Initialize()

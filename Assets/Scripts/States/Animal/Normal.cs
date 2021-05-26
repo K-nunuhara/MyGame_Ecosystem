@@ -65,7 +65,7 @@ namespace AnimalStates
         public void Action(Animal mover, GameObject target)
         {
             // Output "Baaa" every few seconds;
-            Debug.Log("Baaa");
+            Debug.Log(mover.uid + ": Baaa");
         }
 
         private bool CheckStraight(Animal mover)

@@ -11,7 +11,7 @@ namespace AnimalStates
         // Singleton
         public static Eating instance { get; private set; }
 
-        public float eatAmount = 1000;
+        public float eatAmount = 3000;
 
         public GameObject FindTarget(Animal mover)
         {
@@ -56,6 +56,7 @@ namespace AnimalStates
                     Eat(mover, target, target.tag);
                 }
             }
+            Debug.Log(mover.uid + ": !!!");
         }
 
         private void Awake()
@@ -73,21 +74,21 @@ namespace AnimalStates
 
         private void Eat(Animal mover, GameObject target, string tag)
         {
-            if (target.GetComponent<Flower>().calorie == 0)
+            if (target.GetComponent<Flower>().calorie <= target.GetComponent<Flower>().stats.MIN_CALORIE)
             {
                 Destroy(target);
                 mover.ChangeState(Normal.instance);
-                //Debug.Log("State :" + mover.state);
+                mover.isMovable = true;
             }
             else
             {
+                // It is not good because "Flower" is hard-coding
                 if (tag == Species.Type.Flower.ToString())
                 {
                     target.GetComponent<Flower>().calorie =
                         Mathf.Max(target.GetComponent<Flower>().calorie - eatAmount * Time.deltaTime, target.GetComponent<Flower>().stats.MIN_CALORIE);
+                    mover.calorie = Mathf.Min(mover.calorie + eatAmount * Time.deltaTime, mover.stats.MAX_CALORIE);
                 }
-
-                mover.calorie = Mathf.Min(mover.calorie + eatAmount * Time.deltaTime, mover.stats.MAX_CALORIE);
             }
         }
 
