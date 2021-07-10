@@ -21,8 +21,7 @@ public abstract class LivingEntity : MonoBehaviour
 
     public void Die()
     {
-        // TODO: Play dying animation
-        // TODO: Wait few seconds
+        // TODO: Play dying animation and wait few seconds
         Destroy(this.gameObject);
     }
 }

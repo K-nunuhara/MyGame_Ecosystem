@@ -52,11 +52,11 @@ namespace AnimalStates
                     mover.isMovable = false;
                     if (mover.momUid == null)
                     {
-                        // Follow the mother
                         Move(mover, target);
                     }
                     else
                     {
+                        // Follow the mother
                         Move(mover, target);
                     }
                 }

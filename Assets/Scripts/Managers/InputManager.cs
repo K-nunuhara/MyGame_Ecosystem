@@ -14,19 +14,19 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            TimeManager.instance.changeGameSpeed(TimeManager.GameSpeedType.FAST);
-        }
-
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Alpha1))
         {
             TimeManager.instance.changeGameSpeed(TimeManager.GameSpeedType.SLOW);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Alpha2))
         {
             TimeManager.instance.changeGameSpeed(TimeManager.GameSpeedType.NORMAL);
+        }
+
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            TimeManager.instance.changeGameSpeed(TimeManager.GameSpeedType.FAST);
         }
     }
 }
